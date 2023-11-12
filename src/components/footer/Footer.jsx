@@ -1,5 +1,5 @@
 import React from 'react'
-import Picture from "../../assets/profil.png"
+import Picture from "../../assets/profil.webp"
 
 const Footer = () => {
   return (
