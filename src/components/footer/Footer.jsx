@@ -8,7 +8,7 @@ const Footer = () => {
         <img className='w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-[50%]' src={Picture} alt="FooterImage" />
         <span>Come Join Us</span>
       </div>
-      <div className='flex flex-col lg:flex-row lg:w-auto w-full gap-4 lg:text-2xl  text-primary '>
+      <div className='flex flex-col lg:flex-row lg:w-auto w-[70%] gap-4 lg:text-2xl  text-primary '>
         <a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500' href="mailto:dimas.asna@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
         <a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500' href="https://www.google.com" target="_blank" rel="noopener noreferrer">Whatsapp Me</a>
         <a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500' href="https://www.google.com" target="_blank" rel="noopener noreferrer">More Contact</a>

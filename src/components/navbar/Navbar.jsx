@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Navbar = () => {
+
+  
+
   return (
     <nav className='fixed z-[4]  text-[1.0rem] flex justify-center lg:justify-start text-xl w-[100%]'>
       <div className='hidden lg:flex flex-col justify-start leading-[1.5rem] left-0 top-0 p-4 text-primary font-bold z-[4]'>
