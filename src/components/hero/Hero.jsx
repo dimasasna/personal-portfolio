@@ -1,5 +1,5 @@
 import React from 'react'
-import profil from '../../assets/profil.png'
+import profil from '../../assets/profil.webp'
 import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 
