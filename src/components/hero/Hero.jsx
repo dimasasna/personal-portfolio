@@ -2,6 +2,7 @@ import React from 'react'
 import profil from '../../assets/profil.webp'
 import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Typewriter from 'typewriter-effect'
 
 const Hero = () => {
   const { scrollYProgress } = useScroll()
@@ -20,7 +21,22 @@ const Hero = () => {
                   duration: 1,
                   delay: 2.1
                 }
-              }}>Hello, my name is </motion.h1>
+              }}><Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 40,
+                  strings: [
+                    "Hello, my name is",
+                    "Halo, nama saya",
+                    "مرحبا اسمي",
+                    "Bonjour, je m'appelle",
+                    "Привет меня зовут"
+                  ],
+                  pauseFor: 2500
+                }}
+              />
+            </motion.h1>
             <motion.h1
               initial={{ y: -400, opacity: 1 }}
               animate={{
@@ -42,7 +58,7 @@ const Hero = () => {
                 delay: 2
               },
             }}
-            style={{x: right}} 
+            style={{ x: right }}
             className='absolute uppercase  pointer-events-none italic text-primary   z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] font-extrabold  textFilled'>Software Engineer</motion.h1>
           <motion.h1
             initial={{ x: -1800 }}
