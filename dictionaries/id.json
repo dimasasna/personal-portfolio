@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "about": "Tentang",
+    "projects": "Proyek"
+  },
+  "hero": {
+    "greeting": "HALO, SAYA",
+    "role": "Seorang Fullstack Developer",
+    "bio": "Saya membangun aplikasi web yang kuat, efisien, dan terintegrasi secara modular dari database hingga antarmuka pengguna.",
+    "ctaProjects": "Lihat Proyek",
+    "ctaContact": "Kontak Saya"
+  },
+  "projects": {
+    "title": "Koleksi",
+    "accent": "Proyek",
+    "subtitle": "Beberapa aplikasi dan sistem yang pernah saya rancang, kembangkan, dan implementasikan."
+  }
+}

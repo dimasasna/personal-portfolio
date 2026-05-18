@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects"
+  },
+  "hero": {
+    "greeting": "HELLO, I AM",
+    "role": "A Fullstack Developer",
+    "bio": "I build robust, efficient, and modularly integrated web applications from the database all the way to the user interface.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Contact Me"
+  },
+  "projects": {
+    "title": "Project",
+    "accent": "Collection",
+    "subtitle": "A few applications and systems that I have developed, optimized, and deployed."
+  }
+}
