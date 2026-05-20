@@ -16,7 +16,7 @@
     "greeting": "I AM",
     "name": "DEFT VALIAN",
     "role": "FULLSTACK DEVELOPER",
-    "bio": "As an Information Systems student graduating in 2026, I have worked on various web projects—ranging from simple interfaces to complex transparency systems. I enjoy combining technical logic with creative problem-solving to deliver effective and interactive solutions.",
+    "bio": "As an Information Systems student and Software Engineer, I specialize in translating complex business needs into efficient, user-centric web applications. My journey in tech is driven by a focus on problem-solving and delivering real-world impact.\n\nFrom spearheading the digitalization of manual operational workflows to architecting precise frontend interfaces, I thrive on building full-stack solutions from the ground up. Beyond writing clean and maintainable code, I enjoy collaborating to ensure that technical solutions align perfectly with business goals.",
     "downloadCv": "DOWNLOAD CV"
   },
   "skills": {
@@ -26,6 +26,7 @@
   "experience": {
     "title": "Work",
     "accent": "Experience",
+    "technologiesLabel": "Technologies Used",
     "list": [
       {
         "company": "Danova Digital",
@@ -55,9 +56,25 @@
       }
     ]
   },
+  "certificates": {
+    "title": "Certificates &",
+    "accent": "Awards"
+  },
   "projects": {
     "title": "Featured",
     "accent": "Projects",
     "subtitle": "A collection of applications and systems I have designed and built."
+  },
+  "contact": {
+    "title": "Get In",
+    "accent": "Touch",
+    "subtitle": "Have a project idea, a question, or just want to say hi? Feel free to drop a message. I'm always open to new collaborative opportunities.",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email Address",
+    "emailPlaceholder": "name@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project or idea...",
+    "send": "Send Message"
   }
 }

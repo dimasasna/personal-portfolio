@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About"; // Import Komponen Baru
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Certificates from "@/components/Certificates";
+import Contact from "@/components/Contact";
 import { getAllProjects } from "@/lib/mdx";
 import ProjectCard from "@/components/ProjectCard";
 import { getDictionary } from "@/lib/dictionary";
@@ -23,7 +25,12 @@ export default async function Home({ params }: { params: any }) {
 
       {dict?.skills && <Skills dict={dict.skills} />}
 
+      {/* Section Galeri Sertifikat */}
+      {dict?.certificates && <Certificates dict={dict.certificates} />}
+
       {dict?.experience && <Experience dict={dict.experience} />}
+
+      
 
       {/* 3. Section Daftar Proyek */}
       <section id="projects" className="scroll-mt-28">
@@ -46,16 +53,10 @@ export default async function Home({ params }: { params: any }) {
           ))}
         </div>
       </section>
+      
 
-      {/* Section Kontak */}
-      <section id="contact" className="min-h-[30vh] flex flex-col items-center justify-center text-center pb-20 scroll-mt-28">
-          <h3 className="text-2xl font-bold text-brand-text/70 mb-4">
-            {locale === "id" ? "Ingin berkolaborasi?" : "Interested in collaborating?"}
-          </h3>
-          <p className="text-lg text-brand-text/50 font-medium max-w-lg">
-            {locale === "id" ? "Section kontak sedang dalam pengembangan." : "The contact section is currently under development."}
-          </p>
-      </section>
+      {/* Section Kontak Baru */}
+      {dict?.contact && <Contact dict={dict.contact} />}
     </div>
   );
 }

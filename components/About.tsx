@@ -16,7 +16,7 @@ interface AboutProps {
 
 export default function About({ dict }: AboutProps) {
   return (
-    <section id="about" className="scroll-mt-14 py-8 md:py-24">
+    <section id="about" className="scroll-mt-14 py-8 md:py-12">
       <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 max-w-5xl mx-auto px-6">
         
         {/* KOLOM KIRI: Foto Bersih & Elegan (Tanpa Blur/Glow Berat) */}
@@ -48,10 +48,7 @@ export default function About({ dict }: AboutProps) {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex-1 space-y-6"
         >
-          {/* Badge Judul Simple */}
-          <div className="inline-block bg-brand-text/5 text-brand-text/60 px-5 py-1.5 rounded-full border border-brand-text/10">
-            <h2 className="text-sm font-bold tracking-widest">{dict.sectionTitle}</h2>
-          </div>
+          
 
           {/* Sapaan dengan Aksen Solid Color (Tidak norak) */}
           <h3 className="text-3xl md:text-4xl font-black leading-snug text-brand-text uppercase">

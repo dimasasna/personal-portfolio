@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, Folder, Globe } from "lucide-react"; // Import Folder untuk Proyek
+import { Home, User, Briefcase, Folder, Mail, Globe } from "lucide-react"; // Tambahkan Mail
 import { Locale } from "@/lib/dictionary";
 
 interface NavbarProps {
@@ -32,8 +32,8 @@ export default function Navbar({ locale }: NavbarProps) {
       threshold: 0.1,
     });
 
-    // PERBAIKAN 1: Daftarkan id "experience" ke dalam auto scroll-detection
-    const sections = ["home", "about", "experience", "projects"];
+    // PERBAIKAN 1: Tambahkan "contact" ke dalam array untuk deteksi scroll
+    const sections = ["home", "about", "experience", "projects", "contact"];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
@@ -62,16 +62,16 @@ export default function Navbar({ locale }: NavbarProps) {
     }, 1000);
   };
 
-  // PERBAIKAN 2: Tambahkan menu Pengalaman/Experience ke dalam daftar navigasi
+  // PERBAIKAN 2: Tambahkan objek menu Kontak di baris terakhir
   const menuItems = [
     { id: "home", name: locale === "id" ? "Beranda" : "Home", path: "#home", icon: Home, color: "bg-brand-blue" },
     { id: "about", name: locale === "id" ? "Tentang" : "About", path: "#about", icon: User, color: "bg-brand-pink" },
     { id: "experience", name: locale === "id" ? "Pengalaman" : "Experience", path: "#experience", icon: Briefcase, color: "bg-brand-purple" },
-    { id: "projects", name: locale === "id" ? "Proyek" : "Projects", path: "#projects", icon: Folder, color: "bg-brand-purple" }, // Menggunakan ikon Folder
+    { id: "projects", name: locale === "id" ? "Proyek" : "Projects", path: "#projects", icon: Folder, color: "bg-brand-purple" },
+    { id: "contact", name: locale === "id" ? "Kontak" : "Contact", path: "#contact", icon: Mail, color: "bg-brand-text" },
   ];
 
   return (
-    // Mempertahankan struktur responsif bottom-nav di mobile, top-nav di desktop
     <header className="fixed bottom-4 md:top-4 md:bottom-auto inset-x-0 z-50 flex justify-center px-4 transition-all duration-300">
       <nav className="flex items-center gap-1 md:gap-2 bg-white/80 backdrop-blur-md border-2 border-brand-text/10 px-2 md:px-4 py-2 rounded-full shadow-lg">
         
@@ -108,7 +108,7 @@ export default function Navbar({ locale }: NavbarProps) {
               )}
               <Icon className={`w-4 h-4 md:w-4 md:h-4 ${isActive ? "text-white" : "text-brand-text"}`} />
               
-              <span className={`hidden md:block ${isActive ? "text-white" : "hover:text-brand-purple transition-colors"}`}>
+              <span className={`hidden lg:block ${isActive ? "text-white" : "hover:text-brand-purple transition-colors"}`}>
                 {item.name}
               </span>
             </a>

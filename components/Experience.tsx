@@ -16,6 +16,7 @@ interface ExperienceProps {
   dict: {
     title: string;
     accent: string;
+    technologiesLabel: string; // <-- Tambahkan ini di interface
     list: ExperienceItem[];
   };
 }
@@ -27,7 +28,6 @@ export default function Experience({ dict }: ExperienceProps) {
         
         {/* Badge Judul */}
         <div className="text-center mb-16">
-          
           <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
             {dict.title} <span className="text-brand-purple">{dict.accent}</span>.
           </h3>
@@ -43,10 +43,8 @@ export default function Experience({ dict }: ExperienceProps) {
               viewport={{ once: true, margin: "-50px" }} 
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              {/* PERBAIKAN PERFORMA FINAL: Hapus backdrop-blur dan gunakan bg-white murni (Solid) */}
               <div className="bg-white border border-brand-text/10 rounded-[32px] p-6 md:p-10 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-300 group overflow-hidden relative transform-gpu">
                 
-                {/* Efek kilau hardware-accelerated (hanya ubah opacity) */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* --- HEADER KARTU --- */}
@@ -94,7 +92,7 @@ export default function Experience({ dict }: ExperienceProps) {
                   <div className="flex items-center gap-2 mb-4">
                     <Code2 className="w-5 h-5 text-brand-text/40" />
                     <span className="text-sm font-black tracking-wide text-brand-text/60 uppercase">
-                      Technologies Used
+                      {dict.technologiesLabel} {/* <-- Teks hardcoded diubah menjadi dinamis */}
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2 md:gap-3">
