@@ -1,44 +1,47 @@
 import Hero from "@/components/Hero"; 
+import About from "@/components/About"; // Import Komponen Baru
 import { getAllProjects } from "@/lib/mdx";
 import ProjectCard from "@/components/ProjectCard";
-import { getDictionary, Locale } from "@/lib/dictionary";
+import { getDictionary } from "@/lib/dictionary";
 
-export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
-  const { locale } = await params;
+export default async function Home({ params }: { params: any }) {
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale || "id";
   
-  // Ambil data bahasa statis dan proyek mdx secara paralel berdasarkan locale URL
-  const dict = await getDictionary(locale);
+  const dict = (await getDictionary(locale)) as any;
   const projects = getAllProjects(locale);
 
   return (
     <div className="space-y-28 pb-20">
-      {/* Oper data kamus teks khusus hero ke komponen Client Hero */}
-      <Hero dict={dict.hero} />
+      {/* 1. Hero / Home Section */}
+      {dict?.hero && <Hero dict={dict.hero} />}
 
-      {/* Section Daftar Proyek */}
+      {/* 2. About Me Section Baru */}
+      {dict?.about && <About dict={dict.about} />}
+
+      {/* 3. Section Daftar Proyek */}
       <section id="projects" className="scroll-mt-28">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-3 text-brand-text">
-            {dict.projects.title} <span className="text-brand-purple">{dict.projects.accent}</span>.
+            {dict?.projects?.title} <span className="text-brand-purple">{dict?.projects?.accent}</span>.
           </h2>
           <p className="text-brand-text/60 font-medium max-w-md mx-auto text-lg">
-            {dict.projects.subtitle}
+            {dict?.projects?.subtitle}
           </p>
         </div>
 
-        {/* Grid Proyek Terlokalisasi */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.slug} 
-              project={project} 
+              project={project as any} 
               index={index} 
             />
           ))}
         </div>
       </section>
 
-      {/* Section Kontak Sementara */}
+      {/* Section Kontak */}
       <section id="contact" className="min-h-[30vh] flex flex-col items-center justify-center text-center pb-20 scroll-mt-28">
           <h3 className="text-2xl font-bold text-brand-text/70 mb-4">
             {locale === "id" ? "Ingin berkolaborasi?" : "Interested in collaborating?"}

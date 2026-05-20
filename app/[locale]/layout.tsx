@@ -32,7 +32,7 @@ export default async function RootLayout({
         {/* Kirim locale aktif ke Navbar untuk tombol switcher */}
         <Navbar locale={locale} />
         
-        <main className="pt-28 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full">
+        <main className="pt-14 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full">
           {children}
         </main>
       </body>

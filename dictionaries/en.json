@@ -1,18 +1,27 @@
 {
   "navbar": {
+    "home": "Home",
     "about": "About",
     "projects": "Projects"
   },
   "hero": {
-    "greeting": "HELLO, I AM",
-    "role": "A Fullstack Developer",
-    "bio": "I build robust, efficient, and modularly integrated web applications from the database all the way to the user interface.",
+    "greeting": "Hello, I am",
+    "role": "Fullstack Developer",
+    "tagline": "Building functional, interactive, and user-centric web applications.",
     "ctaProjects": "View Projects",
     "ctaContact": "Contact Me"
   },
+  "about": {
+    "sectionTitle": "ABOUT ME",
+    "greeting": "I AM",
+    "name": "DEFT VALIAN",
+    "role": "FULLSTACK DEVELOPER",
+    "bio": "As an Information Systems student graduating in 2026, I have worked on various web projects—ranging from simple interfaces to complex transparency systems. I enjoy combining technical logic with creative problem-solving to deliver effective and interactive solutions.",
+    "downloadCv": "DOWNLOAD CV"
+  },
   "projects": {
-    "title": "Project",
-    "accent": "Collection",
-    "subtitle": "A few applications and systems that I have developed, optimized, and deployed."
+    "title": "Featured",
+    "accent": "Projects",
+    "subtitle": "A collection of applications and systems I have designed and built."
   }
 }

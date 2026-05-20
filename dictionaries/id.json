@@ -1,18 +1,27 @@
 {
   "navbar": {
+    "home": "Beranda",
     "about": "Tentang",
     "projects": "Proyek"
   },
   "hero": {
-    "greeting": "HALO, SAYA",
-    "role": "Seorang Fullstack Developer",
-    "bio": "Saya membangun aplikasi web yang kuat, efisien, dan terintegrasi secara modular dari database hingga antarmuka pengguna.",
+    "greeting": "Halo, Saya",
+    "role": "Fullstack Developer",
+    "tagline": "Membangun aplikasi web yang fungsional, interaktif, dan berpusat pada pengalaman pengguna.",
     "ctaProjects": "Lihat Proyek",
-    "ctaContact": "Kontak Saya"
+    "ctaContact": "Hubungi Saya"
+  },
+  "about": {
+    "sectionTitle": "ABOUT ME",
+    "greeting": "SAYA",
+    "name": "DEFT VALIAN",
+    "role": "FULLSTACK DEVELOPER",
+    "bio": "Sebagai mahasiswa Sistem Informasi yang akan lulus pada 2026, saya telah mengerjakan berbagai proyek web—mulai dari antarmuka sederhana hingga sistem transparansi yang kompleks. Saya menikmati menggabungkan logika teknis dengan pemecahan masalah yang kreatif untuk memberikan solusi yang efektif dan interaktif.",
+    "downloadCv": "UNDUH CV"
   },
   "projects": {
-    "title": "Koleksi",
-    "accent": "Proyek",
-    "subtitle": "Beberapa aplikasi dan sistem yang pernah saya rancang, kembangkan, dan implementasikan."
+    "title": "Proyek",
+    "accent": "Pilihan",
+    "subtitle": "Koleksi aplikasi dan sistem yang telah saya rancang dan bangun."
   }
 }
