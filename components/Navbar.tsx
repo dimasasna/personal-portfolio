@@ -67,7 +67,7 @@ export default function Navbar({ locale }: NavbarProps) {
     { id: "home", name: locale === "id" ? "Beranda" : "Home", path: "#home", icon: Home, color: "bg-brand-blue" },
     { id: "about", name: locale === "id" ? "Tentang" : "About", path: "#about", icon: User, color: "bg-brand-pink" },
     { id: "experience", name: locale === "id" ? "Pengalaman" : "Experience", path: "#experience", icon: Briefcase, color: "bg-brand-purple" },
-    { id: "projects", name: locale === "id" ? "Proyek" : "Projects", path: "#projects", icon: Folder, color: "bg-brand-purple" },
+    { id: "projects", name: locale === "id" ? "Proyek" : "Projects", path: "#projects", icon: Folder, color: "bg-brand-amber" },
     { id: "contact", name: locale === "id" ? "Kontak" : "Contact", path: "#contact", icon: Mail, color: "bg-brand-text" },
   ];
 

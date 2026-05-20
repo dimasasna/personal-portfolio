@@ -21,7 +21,7 @@ const certificates = [
 
 export default function Certificates({ dict }: CertificatesProps) {
   return (
-    <section id="certificates" className="scroll-mt-28 py-16 md:py-24 relative">
+    <section id="certificates" className="scroll-mt-14 py-8 md:py-12 relative">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         
         {/* Badge Judul */}
