@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero"; 
 import About from "@/components/About"; // Import Komponen Baru
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 import { getAllProjects } from "@/lib/mdx";
 import ProjectCard from "@/components/ProjectCard";
 import { getDictionary } from "@/lib/dictionary";
@@ -18,6 +20,10 @@ export default async function Home({ params }: { params: any }) {
 
       {/* 2. About Me Section Baru */}
       {dict?.about && <About dict={dict.about} />}
+
+      {dict?.skills && <Skills dict={dict.skills} />}
+
+      {dict?.experience && <Experience dict={dict.experience} />}
 
       {/* 3. Section Daftar Proyek */}
       <section id="projects" className="scroll-mt-28">

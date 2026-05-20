@@ -19,6 +19,42 @@
     "bio": "As an Information Systems student graduating in 2026, I have worked on various web projects—ranging from simple interfaces to complex transparency systems. I enjoy combining technical logic with creative problem-solving to deliver effective and interactive solutions.",
     "downloadCv": "DOWNLOAD CV"
   },
+  "skills": {
+    "title": "Tech",
+    "accent": "Skills"
+  },
+  "experience": {
+    "title": "Work",
+    "accent": "Experience",
+    "list": [
+      {
+        "company": "Danova Digital",
+        "role": "Fullstack Developer & Founder",
+        "period": "Jan 2026 - Present",
+        "location": "Tangerang, Indonesia",
+        "description": [
+          "Managed the full-cycle web development process from UI/UX design to server deployment.",
+          "Built secure and scalable backend systems using the Laravel framework and PostgreSQL databases.",
+          "Designed responsive and interactive frontend interfaces using ReactJS and Tailwind CSS.",
+          "Implemented on-page SEO strategies and website performance optimization to increase client visibility."
+        ],
+        "technologies": ["Laravel", "ReactJS", "Tailwind CSS", "PostgreSQL", "Figma", "SEO"]
+      },
+      {
+        "company": "PT Advics Manufacturing Indonesia",
+        "role": "IT Intern",
+        "period": "Aug 2025 - Jan 2026",
+        "location": "Karawang, Indonesia",
+        "description": [
+          "Actively participated in IT infrastructure maintenance and internal factory network troubleshooting.",
+          "Assisted the IT team in digitizing workflows, reporting forms, and internal management systems.",
+          "Optimized data input processes and database management using PHP frameworks and MySQL.",
+          "Collaborated with various departments to ensure systems operated without technical issues."
+        ],
+        "technologies": ["PHP", "MySQL", "Bootstrap", "Hardware Maintenance", "Networking"]
+      }
+    ]
+  },
   "projects": {
     "title": "Featured",
     "accent": "Projects",

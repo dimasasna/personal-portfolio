@@ -19,6 +19,42 @@
     "bio": "Sebagai mahasiswa Sistem Informasi yang akan lulus pada 2026, saya telah mengerjakan berbagai proyek web—mulai dari antarmuka sederhana hingga sistem transparansi yang kompleks. Saya menikmati menggabungkan logika teknis dengan pemecahan masalah yang kreatif untuk memberikan solusi yang efektif dan interaktif.",
     "downloadCv": "UNDUH CV"
   },
+  "skills": {
+    "title": "Keahlian",
+    "accent": "Teknis"
+  },
+  "experience": {
+    "title": "Pengalaman",
+    "accent": "Kerja",
+    "list": [
+      {
+        "company": "Danova Digital",
+        "role": "Fullstack Developer & Founder",
+        "period": "Jan 2026 - Sekarang",
+        "location": "Tangerang, Indonesia",
+        "description": [
+          "Mengelola siklus pengembangan web penuh dari perancangan antarmuka (UI/UX) hingga tahap deployment ke server.",
+          "Membangun sistem backend yang aman dan skalabel menggunakan framework Laravel dan database PostgreSQL.",
+          "Merancang antarmuka frontend yang responsif dan interaktif menggunakan ReactJS dan Tailwind CSS.",
+          "Menerapkan strategi SEO on-page dan optimasi performa website untuk meningkatkan visibilitas klien di mesin pencari."
+        ],
+        "technologies": ["Laravel", "ReactJS", "Tailwind CSS", "PostgreSQL", "Figma", "SEO"]
+      },
+      {
+        "company": "PT Advics Manufacturing Indonesia",
+        "role": "IT Intern",
+        "period": "Agt 2025 - Jan 2026",
+        "location": "Karawang, Indonesia",
+        "description": [
+          "Berpartisipasi aktif dalam pemeliharaan infrastruktur IT dan troubleshooting jaringan komputer internal pabrik.",
+          "Membantu tim IT dalam mendigitalisasi alur kerja, form pelaporan, dan sistem manajemen internal.",
+          "Melakukan optimasi proses input data dan pengelolaan database menggunakan framework PHP dan MySQL.",
+          "Berkolaborasi dengan berbagai departemen untuk memastikan sistem berjalan tanpa kendala teknis."
+        ],
+        "technologies": ["PHP", "MySQL", "Bootstrap", "Hardware Maintenance", "Networking"]
+      }
+    ]
+  },
   "projects": {
     "title": "Proyek",
     "accent": "Pilihan",
