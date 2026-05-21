@@ -28,7 +28,7 @@ export default function Certificates({ dict }: CertificatesProps) {
         <div className="text-center mb-12 md:mb-16">
           
           <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
-            {dict.title} <span className="text-brand-purple">{dict.accent}</span>.
+            {dict.title} <span className="text-brand-mint">{dict.accent}</span>.
           </h3>
         </div>
 

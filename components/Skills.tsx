@@ -35,7 +35,7 @@ export default function Skills({ dict }: SkillsProps) {
       {/* PERBAIKAN 1: Judul besar dan tebal, persis seperti section Projects */}
       <div className="text-center mb-16 relative z-20">
         <h2 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
-          {dict.title} <span className="text-brand-purple">{dict.accent}</span>.
+          {dict.title} <span className="text-brand-pink">{dict.accent}</span>.
         </h2>
       </div>
 

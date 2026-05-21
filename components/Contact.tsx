@@ -70,7 +70,7 @@ export default function Contact({ dict }: ContactProps) {
           >
             <div>
               <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text mb-4">
-                {dict.title} <span className="text-brand-purple">{dict.accent}</span>.
+                {dict.title} {dict.accent}.
               </h3>
               <p className="text-lg text-brand-text/70 font-medium leading-relaxed">
                 {dict.subtitle}

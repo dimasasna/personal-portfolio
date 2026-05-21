@@ -36,7 +36,7 @@ export default async function Home({ params }: { params: any }) {
       <section id="projects" className="scroll-mt-28">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-3 text-brand-text">
-            {dict?.projects?.title} <span className="text-brand-purple">{dict?.projects?.accent}</span>.
+            {dict?.projects?.title} <span className="text-brand-amber">{dict?.projects?.accent}</span>.
           </h2>
           <p className="text-brand-text/60 font-medium max-w-md mx-auto text-lg">
             {dict?.projects?.subtitle}

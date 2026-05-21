@@ -119,9 +119,9 @@ export default function Hero({ dict }: HeroProps) {
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white p-4 bg-white/10 rounded-full shadow-lg backdrop-blur-md border border-white/10">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&h=100&auto=format&fit=crop" 
+                    src="/images/hero2.webp" 
                     alt="Foto Profil dftvln" 
-                    className="w-10 h-10 rounded-full border border-white/20"
+                    className="w-10 h-10 rounded-full border border-white/20 object-cover"
                   />
                   <div>
                     <p className="text-base font-black text-white/90">@dftvln</p> 

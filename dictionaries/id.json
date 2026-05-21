@@ -29,30 +29,30 @@
     "technologiesLabel": "Teknologi yang Digunakan",
     "list": [
       {
-        "company": "Danova Digital",
-        "role": "Fullstack Developer & Founder",
-        "period": "Jan 2026 - Sekarang",
-        "location": "Tangerang, Indonesia",
-        "description": [
-          "Mengelola siklus pengembangan web penuh dari perancangan antarmuka (UI/UX) hingga tahap deployment ke server.",
-          "Membangun sistem backend yang aman dan skalabel menggunakan framework Laravel dan database PostgreSQL.",
-          "Merancang antarmuka frontend yang responsif dan interaktif menggunakan ReactJS dan Tailwind CSS.",
-          "Menerapkan strategi SEO on-page dan optimasi performa website untuk meningkatkan visibilitas klien di mesin pencari."
-        ],
-        "technologies": ["Laravel", "ReactJS", "Tailwind CSS", "PostgreSQL", "Figma", "SEO"]
-      },
-      {
         "company": "PT Advics Manufacturing Indonesia",
-        "role": "IT Intern",
-        "period": "Agt 2025 - Jan 2026",
+        "role": "Fullstack Developer",
+        "period": "Aug 2025 - Feb 2026",
         "location": "Karawang, Indonesia",
         "description": [
-          "Berpartisipasi aktif dalam pemeliharaan infrastruktur IT dan troubleshooting jaringan komputer internal pabrik.",
-          "Membantu tim IT dalam mendigitalisasi alur kerja, form pelaporan, dan sistem manajemen internal.",
-          "Melakukan optimasi proses input data dan pengelolaan database menggunakan framework PHP dan MySQL.",
-          "Berkolaborasi dengan berbagai departemen untuk memastikan sistem berjalan tanpa kendala teknis."
+          "Menggantikan proses manual dengan membangun Sistem NG Scanning (integrasi QR) dan otomatisasi pipeline dokumen Scrap Evidence.",
+          "Membangun aplikasi inti yang scalable (Sistem Warehouse, Manajemen Aset IT, dan Help Desk) menggunakan ekosistem Laravel dan ReactJS.",
+          "Mengelola ribuan data secara konkuren dengan kecepatan tinggi menggunakan teknik seperti lazy loading pada lingkungan sistem yang berat.",
+          "Merombak antarmuka lama menggunakan Tailwind CSS, menciptakan aplikasi yang responsif dan intuitif bagi eksekutif kantor maupun staf lapangan."
         ],
-        "technologies": ["PHP", "MySQL", "Bootstrap", "Hardware Maintenance", "Networking"]
+        "technologies": ["Laravel", "ReactJS", "Tailwind CSS", "MySQL", "PostgreSQL"]
+      },
+      {
+        "company": "Vocasia",
+        "role": "Frontend Developer",
+        "period": "Jan 2025 - Jun 2025",
+        "location": "Remote",
+        "description": [
+          "Mengubah desain kompleks menjadi komponen web yang responsif, mobile-first, dan kompatibel di berbagai browser.",
+          "Menyelesaikan 8+ tugas frontend berskala besar menggunakan framework modern untuk meningkatkan fitur dan kapabilitas platform.",
+          "Terlibat aktif dalam sprint teknis mingguan dan rapat sinkronisasi untuk menyelaraskan alur pengembangan dengan target bisnis.",
+          "Meraih Sertifikat Penghargaan atas konsistensi dalam menghasilkan kode yang bersih (clean code) dan selesai lebih cepat dari tenggat waktu."
+        ],
+        "technologies": ["NextJS", "TypeScript", "Tailwind CSS", "Gitlab", "Figma"]
       }
     ]
   },
