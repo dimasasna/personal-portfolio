@@ -66,7 +66,7 @@ export default function About({ dict }: AboutProps) {
 
           {/* Bio Rapi dengan Garis Samping Solid */}
           <div className="border-l-4 border-brand-purple pl-6 py-2 my-6">
-            <p className="text-lg text-brand-text/70 font-medium leading-relaxed">
+            <p className="text-lg whitespace-pre-line text-brand-text/70 font-medium leading-relaxed">
               {dict.bio}
             </p>
           </div>
