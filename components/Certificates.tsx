@@ -11,12 +11,12 @@ interface CertificatesProps {
 
 // Data sementara (Ganti link Unsplash ini dengan link foto sertifikat asli Anda nanti)
 const certificates = [
-  { id: 1, alt: "Sertifikat 1", img: "https://images.unsplash.com/photo-1593344609121-66236bba7881?q=80&w=800&auto=format&fit=crop" },
-  { id: 2, alt: "Sertifikat 2", img: "https://images.unsplash.com/photo-1589330694653-efa647530e38?q=80&w=800&auto=format&fit=crop" },
-  { id: 3, alt: "Sertifikat 3", img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" },
-  { id: 4, alt: "Sertifikat 4", img: "https://images.unsplash.com/photo-1523289297619-7564d67c5147?q=80&w=800&auto=format&fit=crop" },
-  { id: 5, alt: "Sertifikat 5", img: "https://images.unsplash.com/photo-1558025137-0b4eaef2a65a?q=80&w=800&auto=format&fit=crop" },
-  { id: 6, alt: "Sertifikat 6", img: "https://images.unsplash.com/photo-1557425955-df376b5903c8?q=80&w=800&auto=format&fit=crop" },
+  { id: 1, alt: "Sertifikat Responsive Web Design", img: "images/certificate/freecodecamp.webp" },
+  { id: 2, alt: "Sertifikat UIUX Bootcamp", img: "images/certificate/uiux.webp" },
+  { id: 3, alt: "Sertifikat Bootstrap", img: "images/certificate/bootstrap.webp" },
+  { id: 4, alt: "Sertifikat ReactJS", img: "images/certificate/react.webp" },
+  { id: 5, alt: "Sertifikat Junior Web Developer", img: "images/certificate/webdev.webp" },
+  { id: 6, alt: "Sertifikat Frontend Developer", img: "images/certificate/frontend.webp" },
 ];
 
 export default function Certificates({ dict }: CertificatesProps) {
@@ -49,7 +49,7 @@ export default function Certificates({ dict }: CertificatesProps) {
                 - hover:!opacity-100 : Mengembalikan opacity 100% HANYA pada foto yang sedang disorot
                 - transform-gpu : Memastikan animasi scale ringan dan tidak lag
               */}
-              <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden bg-brand-text/5 border border-brand-text/10 cursor-pointer transition-all duration-500 ease-out hover:scale-105 hover:z-10 hover:shadow-2xl hover:shadow-brand-purple/20 group-hover:opacity-50 hover:!opacity-100 transform-gpu">
+              <div className="relative aspect-[4/3] rounded-[12px] overflow-hidden bg-brand-text/5 border border-brand-text/10 cursor-pointer transition-all duration-500 ease-out hover:scale-105 hover:z-10 hover:shadow-2xl hover:shadow-brand-mint/20 group-hover:opacity-50 hover:!opacity-100 transform-gpu">
                 
                 <img 
                   src={cert.img} 

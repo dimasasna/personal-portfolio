@@ -55,8 +55,8 @@ export default function Contact({ dict }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="scroll-mt-28 py-16 md:py-24 relative">
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+    <section id="contact" className="scroll-mt-14 py-8 md:py-12 relative">
+      <div className="max-w-5xl mx-auto relative z-10">
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           
