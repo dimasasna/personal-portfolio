@@ -28,12 +28,12 @@ export default function About({ dict }: AboutProps) {
           className="relative w-full max-w-xs md:max-w-sm shrink-0"
         >
           {/* Aksen Background Solid yang Lembut (Sangat ringan diproses) */}
-          <div className="absolute inset-0 bg-brand-pink/15 rounded-[32px] transform translate-x-4 translate-y-4 -rotate-3" />
+          <div className="absolute inset-0 bg-brand-amber/15 rounded-[32px] transform translate-x-4 translate-y-4 -rotate-3" />
           
           {/* Frame Foto Utama */}
           <div className="relative aspect-[4/5] bg-white rounded-[32px] shadow-xl border border-brand-text/5 overflow-hidden z-10">
             <img 
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" 
+              src="/images/about.jpg" 
               alt="Profil" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
             />
@@ -74,8 +74,8 @@ export default function About({ dict }: AboutProps) {
           {/* Tombol Clean & Modern */}
           <div className="pt-2">
             <a 
-              href="/cv.pdf" 
-              download
+              href="/CV-DeftValianExanova.pdf" 
+              download="CV-DeftValianExanova.pdf"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-text text-white font-black rounded-full shadow-md hover:bg-brand-purple hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <Download className="w-5 h-5" /> {dict.downloadCv}
