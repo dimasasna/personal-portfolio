@@ -61,9 +61,15 @@
     "accent": "Penghargaan"
   },
   "projects": {
-    "title": "Proyek",
-    "accent": "Pilihan",
-    "subtitle": "Koleksi aplikasi dan sistem yang telah saya rancang dan bangun."
+    "title": "Karya",
+    "accent": "Terbaik",
+    "subtitle": "Kumpulan proyek yang telah saya bangun, mulai dari desain antarmuka hingga sistem backend yang kompleks.",
+    "drawer": {
+      "close": "Tutup",
+      "techStack": "Teknologi yang Digunakan",
+      "viewLive": "Lihat Proyek Asli",
+      "sourceCode": "Kode Sumber"
+    }
   },
   "contact": {
     "title": "Hubungi",

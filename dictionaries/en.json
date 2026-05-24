@@ -62,8 +62,14 @@
   },
   "projects": {
     "title": "Featured",
-    "accent": "Projects",
-    "subtitle": "A collection of applications and systems I have designed and built."
+    "accent": "Works",
+    "subtitle": "A collection of projects I've built, ranging from user interfaces to complex backend systems.",
+    "drawer": {
+      "close": "Close",
+      "techStack": "Technologies Used",
+      "viewLive": "View Live Project",
+      "sourceCode": "Source Code"
+    }
   },
   "contact": {
     "title": "Get In",
