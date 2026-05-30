@@ -36,7 +36,7 @@ export default async function RootLayout({
         {/* 2. PERUBAHAN DISINI: Tambahkan 'as Locale' agar komponen Navbar tetap aman */}
         <Navbar locale={locale as Locale} />
 
-        <main className="pt-14 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full">
+        <main className="pt-14 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full overflow-x-hidden">
           {children}
         </main>
       </body>
