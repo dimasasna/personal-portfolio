@@ -29,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${plusJakartaSans.className} bg-brand-bg text-brand-text antialiased selection:bg-brand-pink selection:text-white overflow-x-hidden`}
+        className={`${plusJakartaSans.className} bg-brand-bg text-brand-text antialiased selection:bg-brand-pink selection:text-white `}
       >
         <Preloader />
 
