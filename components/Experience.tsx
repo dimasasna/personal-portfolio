@@ -24,27 +24,26 @@ interface ExperienceProps {
 export default function Experience({ dict }: ExperienceProps) {
   return (
     <section id="experience" className="scroll-mt-14 py-8 md:py-12 relative">
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        
+      <div className="max-w-5xl mx-auto md:px-6 relative z-10">
         {/* Badge Judul */}
         <div className="text-center mb-16">
           <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
-            {dict.title} <span className="text-brand-purple">{dict.accent}</span>.
+            {dict.title}{" "}
+            <span className="text-brand-purple">{dict.accent}</span>.
           </h3>
         </div>
 
         {/* List Experience Cards */}
         <div className="flex flex-col gap-10">
           {dict.list.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }} 
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <div className="bg-white border border-brand-text/10 rounded-[32px] p-6 md:p-10 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-300 group overflow-hidden relative transform-gpu">
-                
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* --- HEADER KARTU --- */}
@@ -92,13 +91,14 @@ export default function Experience({ dict }: ExperienceProps) {
                   <div className="flex items-center gap-2 mb-4">
                     <Code2 className="w-5 h-5 text-brand-text/40" />
                     <span className="text-sm font-black tracking-wide text-brand-text/60 uppercase">
-                      {dict.technologiesLabel} {/* <-- Teks hardcoded diubah menjadi dinamis */}
+                      {dict.technologiesLabel}{" "}
+                      {/* <-- Teks hardcoded diubah menjadi dinamis */}
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2 md:gap-3">
                     {item.technologies.map((tech, i) => (
-                      <span 
-                        key={i} 
+                      <span
+                        key={i}
                         className="px-4 py-1.5 bg-brand-text/5 text-brand-text/80 text-sm font-bold rounded-full border border-brand-text/5 group-hover:border-brand-purple/10 group-hover:bg-brand-purple/5 transition-colors duration-300"
                       >
                         {tech}
@@ -106,12 +106,10 @@ export default function Experience({ dict }: ExperienceProps) {
                     ))}
                   </div>
                 </div>
-
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
