@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 import Preloader from "@/components/Preloader";
+import ClientEffects from "@/components/effects/ClientEffects";
 import { Locale } from "@/lib/dictionary";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -58,6 +59,7 @@ export default async function RootLayout({
         className={`${plusJakartaSans.className} bg-brand-bg text-brand-text antialiased selection:bg-brand-pink selection:text-white `}
       >
         <Preloader />
+        <ClientEffects />
 
         {/* 2. PERUBAHAN DISINI: Tambahkan 'as Locale' agar komponen Navbar tetap aman */}
         <Navbar locale={locale as Locale} />

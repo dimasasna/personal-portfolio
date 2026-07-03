@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import Image from "next/image";
 
 interface AboutProps {
   dict: {
@@ -31,10 +32,12 @@ export default function About({ dict }: AboutProps) {
 
           {/* Frame Foto Utama */}
           <div className="relative aspect-[4/5] bg-white rounded-[32px] shadow-xl border border-brand-text/5 overflow-hidden z-10">
-            <img
+            <Image
               src="/images/about.jpg"
               alt="Profil"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              fill
+              sizes="(max-width: 768px) 100vw, 384px"
+              className="object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </motion.div>
@@ -48,7 +51,7 @@ export default function About({ dict }: AboutProps) {
           className="flex-1 space-y-6"
         >
           {/* Sapaan dengan Aksen Solid Color (Tetap menggunakan Flexbox responsif) */}
-          <h3 className="flex flex-col items-start gap-3 md:gap-4 text-3xl md:text-4xl font-black text-brand-text uppercase">
+          <h2 className="flex flex-col items-start gap-3 md:gap-4 text-3xl md:text-4xl font-black text-brand-text uppercase">
             {/* Baris 1: Sapaan & Nama */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
               <span>{dict.greeting}</span>
@@ -61,7 +64,7 @@ export default function About({ dict }: AboutProps) {
             <span className="bg-brand-mint text-brand-text px-3 py-1 rounded-xl whitespace-nowrap rotate-1 shadow-sm">
               {dict.role}
             </span>
-          </h3>
+          </h2>
 
           {/* Bio Container (fix for missing left border on mobile) */}
           {/* Kita gunakan class 'border-l-4' tanpa media query agar garis ungu selalu tampil */}

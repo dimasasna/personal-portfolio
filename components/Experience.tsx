@@ -27,10 +27,10 @@ export default function Experience({ dict }: ExperienceProps) {
       <div className="max-w-5xl mx-auto md:px-6 relative z-10">
         {/* Badge Judul */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
             {dict.title}{" "}
             <span className="text-brand-purple">{dict.accent}</span>.
-          </h3>
+          </h2>
         </div>
 
         {/* List Experience Cards */}

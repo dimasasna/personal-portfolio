@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Briefcase, Mail } from "lucide-react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import MagneticButton from "@/components/effects/MagneticButton";
 
 // Lazy-load particles so they don't block initial render
@@ -50,7 +51,7 @@ export default function Hero({ dict }: HeroProps) {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight text-brand-text">
-            Deft Valian <span className="text-brand-blue">Exanova</span>.
+            Deft Valian <span className="text-shimmer">Exanova</span>.
           </h1>
 
           <p className="text-2xl font-bold text-brand-text/90">
@@ -119,27 +120,31 @@ export default function Hero({ dict }: HeroProps) {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {/* PERBAIKAN 1: Hapus 'opacity-80' dan 'mix-blend-overlay' agar foto tampil 100% natural */}
-              <img 
-                src="images/hero.webp" 
+              <Image 
+                src="/images/hero.webp" 
                 alt="Deft Valian" 
-                className="w-full h-full object-cover" 
+                fill
+                priority
+                className="object-cover" 
               />
 
               {/* PERBAIKAN 2: Ubah gradient overlay menjadi transparan natural (hanya gelap di bawah agar teks putih tetap terbaca) */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
               <div className="absolute top-10 left-10 text-white">
-                <h3 className="text-3xl font-black tracking-tight">Deft Valian <span className="text-brand-amber">Exanova</span></h3>
+                <h2 className="text-3xl font-black tracking-tight">Deft Valian <span className="text-brand-amber">Exanova</span></h2>
                 <p className="text-base font-bold text-white/80">Fullstack Developer</p>
               </div>
 
               {/* Bento Detail Bawah: Glassmorphism elegan, transparan tanpa warna ngejreng */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white p-4 bg-white/10 rounded-full shadow-lg backdrop-blur-md border border-white/10">
                 <div className="flex items-center gap-3">
-                  <img 
+                  <Image 
                     src="/images/hero2.webp" 
                     alt="Foto Profil dftvln" 
-                    className="w-10 h-10 rounded-full border border-white/20 object-cover"
+                    width={40}
+                    height={40}
+                    className="rounded-full border border-white/20 object-cover"
                   />
                   <div>
                     <p className="text-base font-black text-white/90">@dftvln</p> 

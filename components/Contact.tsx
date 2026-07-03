@@ -69,9 +69,9 @@ export default function Contact({ dict }: ContactProps) {
             className="flex-1 space-y-8"
           >
             <div>
-              <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text mb-4">
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text mb-4">
                 {dict.title} {dict.accent}.
-              </h3>
+              </h2>
               <p className="text-lg text-brand-text/70 font-medium leading-relaxed">
                 {dict.subtitle}
               </p>

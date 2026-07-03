@@ -27,9 +27,9 @@ export default function Certificates({ dict }: CertificatesProps) {
         {/* Badge Judul */}
         <div className="text-center mb-12 md:mb-16">
           
-          <h3 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
             {dict.title} <span className="text-brand-mint">{dict.accent}</span>.
-          </h3>
+          </h2>
         </div>
 
         {/* Grid Galeri Sertifikat 
