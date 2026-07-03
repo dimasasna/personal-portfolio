@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 interface SkillsProps {
   dict: {
@@ -33,11 +34,17 @@ export default function Skills({ dict }: SkillsProps) {
     <section id="skills" className="py-10 overflow-hidden relative">
       
       {/* PERBAIKAN 1: Judul besar dan tebal, persis seperti section Projects */}
-      <div className="text-center mb-16 relative z-20">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-16 relative z-20"
+      >
         <h2 className="text-4xl md:text-5xl font-black tracking-tight text-brand-text">
           {dict.title} <span className="text-brand-pink">{dict.accent}</span>.
         </h2>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col gap-6 md:gap-8 relative">
         
@@ -46,7 +53,13 @@ export default function Skills({ dict }: SkillsProps) {
         <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-brand-bg to-transparent z-10 pointer-events-none" />
 
         {/* Baris 1: Jalan ke Kiri */}
-        <div className="flex w-max animate-scroll pause-on-hover py-4">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex w-max animate-scroll pause-on-hover py-4"
+        >
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6">
             {multipliedTop.map((skill, index) => (
               <SkillCard key={`top-1-${index}`} skill={skill} />
@@ -57,10 +70,16 @@ export default function Skills({ dict }: SkillsProps) {
               <SkillCard key={`top-2-${index}`} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Baris 2: Jalan ke Kanan (Reverse) */}
-        <div className="flex w-max animate-scroll-reverse pause-on-hover py-4">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex w-max animate-scroll-reverse pause-on-hover py-4"
+        >
           <div className="flex gap-4 md:gap-6 pr-4 md:pr-6">
             {multipliedBottom.map((skill, index) => (
               <SkillCard key={`bottom-1-${index}`} skill={skill} />
@@ -71,7 +90,7 @@ export default function Skills({ dict }: SkillsProps) {
               <SkillCard key={`bottom-2-${index}`} skill={skill} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <style>{`
