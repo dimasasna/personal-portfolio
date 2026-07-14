@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface SkillsProps {
@@ -125,10 +126,13 @@ function SkillCard({ skill }: { skill: { name: string; img: string } }) {
     <div className="group flex items-center gap-3 md:gap-4 px-6 md:px-8 py-4 md:py-5 bg-brand-card/60 backdrop-blur-md border border-brand-text/10 rounded-[24px] shadow-sm hover:shadow-xl hover:scale-110 hover:-translate-y-2 hover:border-brand-purple/30 hover:bg-brand-card transition-all duration-300 cursor-pointer">
       
       {/* PERBAIKAN 2: Grayscale dihapus, warna asli selalu tampil */}
-      <img 
+      <Image 
         src={skill.img} 
         alt={skill.name} 
-        className="w-6 h-6 md:w-8 md:h-8 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300" 
+        width={32}
+        height={32}
+        className="w-6 h-6 md:w-8 md:h-8 object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300"
+        unoptimized
       />
       
       {/* PERBAIKAN 3: Teks berubah warna saat di-hover */}

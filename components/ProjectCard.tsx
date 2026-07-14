@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Fungsi pemetaan Tag ke URL Logo Devicon
 const getTechIcon = (tag: string) => {
@@ -51,6 +52,21 @@ const getTechIcon = (tag: string) => {
   return icons[tag.toLowerCase()]; // Case-insensitive lookup
 };
 
+const FALLBACK_IMAGE =
+  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop";
+
+/**
+ * Normalisasi src gambar dari MDX frontmatter:
+ * - URL eksternal (http/https) → dipakai langsung
+ * - Path lokal tanpa '/' → tambahkan '/' di depan
+ * - Kosong/undefined → pakai fallback
+ */
+function normalizeImageSrc(src: string | undefined): string {
+  if (!src) return FALLBACK_IMAGE;
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return src.startsWith("/") ? src : `/${src}`;
+}
+
 interface ProjectCardProps {
   project: any;
   index: number;
@@ -61,9 +77,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
   const title = data.title || "Proyek Tanpa Judul";
   const description = data.description || "";
-  const image =
-    data.image ||
-    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop";
+  const image = normalizeImageSrc(data.image);
   const tags = data.tags || [];
 
   return (
@@ -76,10 +90,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <div className="bg-brand-card border border-brand-text/10 rounded-[32px] overflow-hidden group hover:shadow-xl hover:border-brand-amber/30 transition-all duration-300 hover:-translate-y-1.5 transform-gpu h-full flex flex-col">
         <div className="relative aspect-video w-full bg-brand-text/5 overflow-hidden border-b border-brand-text/5">
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-brand-text/0 group-hover:bg-brand-amber/5 transition-colors duration-300 pointer-events-none" />
         </div>
@@ -103,10 +119,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 >
                   {/* Cek apakah logonya ada di fungsi mapping kita */}
                   {getTechIcon(tag) && (
-                    <img
-                      src={getTechIcon(tag)}
+                    <Image
+                      src={getTechIcon(tag) as string}
                       alt={tag}
+                      width={14}
+                      height={14}
                       className="w-3.5 h-3.5 object-contain"
+                      unoptimized
                     />
                   )}
                   {tag}

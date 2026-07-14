@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Award, Eye, X, Calendar } from "lucide-react";
 
@@ -102,10 +103,12 @@ export default function Certificates({ dict }: CertificatesProps) {
             >
               {/* Image Frame */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-text/5 border-b border-brand-text/5">
-                <img
-                  src={cert.img}
+                <Image
+                  src={`/${cert.img}`}
                   alt={cert.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Hover overlay with interactive zoom icon */}
@@ -181,10 +184,12 @@ export default function Certificates({ dict }: CertificatesProps) {
 
                 {/* Modal Body */}
                 <div className="p-4 md:p-6 flex-1 overflow-y-auto flex items-center justify-center bg-brand-text/[0.02]">
-                  <img
-                    src={selectedCert.img}
+                  <Image
+                    src={`/${selectedCert.img}`}
                     alt={selectedCert.alt}
-                    className="max-h-[55vh] md:max-h-[60vh] object-contain rounded-xl shadow-md border border-brand-text/5"
+                    width={900}
+                    height={675}
+                    className="max-h-[55vh] md:max-h-[60vh] w-auto object-contain rounded-xl shadow-md border border-brand-text/5"
                   />
                 </div>
               </div>

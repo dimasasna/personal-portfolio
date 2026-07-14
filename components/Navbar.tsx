@@ -75,7 +75,7 @@ export default function Navbar({ locale }: NavbarProps) {
 
   return (
     <header className="fixed bottom-4 md:top-4 md:bottom-auto inset-x-0 z-50 flex justify-center px-4 transition-all duration-300">
-      <nav className="flex items-center gap-0.5 md:gap-2 bg-brand-card/80 backdrop-blur-md border-2 border-brand-text/10 px-1.5 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg transition-colors duration-300">
+      <nav className="flex items-center gap-1 md:gap-2 bg-brand-card/80 backdrop-blur-md border-2 border-brand-text/10 px-2 py-2 md:px-4 md:py-2 rounded-full shadow-lg transition-colors duration-300">
 
         {/* Logo - Hidden on Mobile */}
         <a
@@ -98,7 +98,7 @@ export default function Navbar({ locale }: NavbarProps) {
               key={item.id}
               href={item.path}
               onClick={() => handleNavLinkClick(item.id)}
-              className="relative px-2 md:px-4 py-1.5 md:py-2 rounded-full text-sm font-bold flex items-center gap-2 transition-colors text-brand-text"
+              className="relative px-2.5 md:px-4 py-2 md:py-2 rounded-full text-sm font-bold flex items-center gap-2 transition-colors text-brand-text"
               title={item.name}
             >
               {isActive && (
@@ -108,7 +108,7 @@ export default function Navbar({ locale }: NavbarProps) {
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              <Icon className={`w-3.5 h-3.5 md:w-4 md:h-4 ${isActive ? (item.id === "contact" ? "text-brand-bg" : "text-white") : "text-brand-text"}`} />
+              <Icon className={`w-4.5 h-4.5 md:w-4 md:h-4 ${isActive ? (item.id === "contact" ? "text-brand-bg" : "text-white") : "text-brand-text"}`} />
 
               <span className={`hidden lg:block ${isActive ? (item.id === "contact" ? "text-brand-bg" : "text-white") : "hover:text-brand-purple transition-colors"}`}>
                 {item.name}
@@ -122,23 +122,23 @@ export default function Navbar({ locale }: NavbarProps) {
         {/* Language Switcher */}
         <button
           onClick={handleLanguageToggle}
-          className="flex items-center gap-1 px-1.5 py-1 md:px-3 md:py-1.5 border border-brand-text/10 rounded-full text-[10px] md:text-xs font-black bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
+          className="flex items-center gap-1 px-2.5 py-1.5 md:px-3 md:py-1.5 border border-brand-text/10 rounded-full text-xs md:text-xs font-black bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
         >
-          <Globe className="w-3 h-3 md:w-3.5 md:h-3.5 text-brand-text/70" />
+          <Globe className="w-3.5 h-3.5 md:w-3.5 md:h-3.5 text-brand-text/70" />
           <span>{locale.toUpperCase()}</span>
         </button>
 
         {/* Dark/Light Mode Switcher */}
         <button
           onClick={toggleTheme}
-          className="flex items-center justify-center p-1 md:p-2 border border-brand-text/10 rounded-full bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
+          className="flex items-center justify-center p-2 md:p-2 border border-brand-text/10 rounded-full bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
           title={theme === "light" ? "Dark Mode" : "Light Mode"}
           aria-label="Toggle Theme"
         >
           {theme === "light" ? (
-            <Moon className="w-3.5 h-3.5 text-brand-text/70" />
+            <Moon className="w-4 h-4 text-brand-text/70" />
           ) : (
-            <Sun className="w-3.5 h-3.5 text-brand-text/70" />
+            <Sun className="w-4 h-4 text-brand-text/70" />
           )}
         </button>
       </nav>

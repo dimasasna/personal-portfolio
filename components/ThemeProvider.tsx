@@ -15,7 +15,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // Check local storage or system preference on mount
+    // Baca dari localStorage atau system preference
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     if (savedTheme === "dark" || savedTheme === "light") {
       setTheme(savedTheme);
@@ -36,6 +36,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const updateDOM = () => {
       setTheme(nextTheme);
       localStorage.setItem("theme", nextTheme);
+      // Simpan juga ke cookie agar server bisa baca saat SSR (mencegah tema flash)
+      document.cookie = `theme=${nextTheme};path=/;max-age=31536000;SameSite=Lax`;
       if (nextTheme === "dark") {
         document.documentElement.classList.add("dark");
       } else {

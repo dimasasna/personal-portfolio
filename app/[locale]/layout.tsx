@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
@@ -53,23 +54,14 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
 
+  // Baca cookie tema dari server agar HTML awal sudah punya class yang benar
+  // → tidak perlu script tag apapun, tidak ada flash
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get("theme")?.value;
+  const isDark = themeCookie === "dark";
+
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              } catch (_) {}
-            `,
-          }}
-        />
-      </head>
+    <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
       <body
         className={`${plusJakartaSans.className} bg-brand-bg text-brand-text antialiased selection:bg-brand-pink selection:text-white transition-colors duration-300`}
         suppressHydrationWarning
@@ -77,7 +69,6 @@ export default async function RootLayout({
         <ThemeProvider>
           <ClientEffects />
 
-          {/* 2. PERUBAHAN DISINI: Tambahkan 'as Locale' agar komponen Navbar tetap aman */}
           <Navbar locale={locale as Locale} />
 
           <main className="pt-14 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full overflow-x-hidden">

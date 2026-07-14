@@ -40,8 +40,17 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Amankan folder statis dari incaran middleware
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|projects|images|content|.*\\.pdf).*)",
+    {
+      // Jalankan middleware hanya pada halaman aktual, bukan aset statis
+      source:
+        "/((?!api|_next/static|_next/image|favicon\\.ico|robots\\.txt|sitemap\\.xml|projects|images|content|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|pdf|woff2?|ttf|otf|css|js)).*)",
+      // 'missing' penting: memastikan Next.js tahu middleware tidak diperlukan
+      // untuk request yang sudah memiliki locale di URL
+      missing: [
+        { type: "header", key: "next-router-prefetch" },
+        { type: "header", key: "purpose", value: "prefetch" },
+      ],
+    },
   ],
 };

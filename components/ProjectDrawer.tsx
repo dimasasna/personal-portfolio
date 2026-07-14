@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Code2 } from "lucide-react";
 
@@ -53,6 +54,21 @@ const getTechIcon = (tag: string) => {
   return icons[tag.toLowerCase()]; // Case-insensitive lookup
 };
 
+const FALLBACK_IMAGE =
+  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800";
+
+/**
+ * Normalisasi src gambar dari MDX frontmatter:
+ * - URL eksternal (http/https) → dipakai langsung
+ * - Path lokal tanpa '/' → tambahkan '/' di depan
+ * - Kosong/undefined → pakai fallback
+ */
+function normalizeImageSrc(src: string | undefined): string {
+  if (!src) return FALLBACK_IMAGE;
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return src.startsWith("/") ? src : `/${src}`;
+}
+
 interface ProjectDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -78,7 +94,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
 
   const title = data.title || "Proyek Tanpa Judul";
   const description = data.description || "Deskripsi proyek belum ditambahkan.";
-  const image = data.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800";
+  const image = normalizeImageSrc(data.image);
   const tags = data.tags || [];
   const link = data.link;
   const github = data.github;
@@ -114,10 +130,13 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
                 <X className="w-5 h-5" />
               </button>
 
-              <img
+              <Image
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 600px"
+                className="object-cover"
+                priority
               />
             </div>
 
@@ -150,7 +169,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
                           className="flex items-center gap-2 px-4 py-2 bg-brand-text/5 text-brand-text/80 text-sm font-bold rounded-full border border-brand-text/5 hover:bg-brand-card hover:shadow-sm transition-all"
                         >
                           {iconUrl && (
-                            <img src={iconUrl} alt={tag} className="w-4 h-4 object-contain" />
+                            <Image src={iconUrl} alt={tag} width={16} height={16} className="w-4 h-4 object-contain" unoptimized />
                           )}
                           {tag}
                         </span>
