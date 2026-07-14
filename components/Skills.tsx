@@ -122,7 +122,7 @@ export default function Skills({ dict }: SkillsProps) {
 // Komponen Card dengan Hover Interaktif Baru
 function SkillCard({ skill }: { skill: { name: string; img: string } }) {
   return (
-    <div className="group flex items-center gap-3 md:gap-4 px-6 md:px-8 py-4 md:py-5 bg-white/60 backdrop-blur-md border border-brand-text/10 rounded-[24px] shadow-sm hover:shadow-xl hover:scale-110 hover:-translate-y-2 hover:border-brand-purple/30 hover:bg-white transition-all duration-300 cursor-pointer">
+    <div className="group flex items-center gap-3 md:gap-4 px-6 md:px-8 py-4 md:py-5 bg-brand-card/60 backdrop-blur-md border border-brand-text/10 rounded-[24px] shadow-sm hover:shadow-xl hover:scale-110 hover:-translate-y-2 hover:border-brand-purple/30 hover:bg-brand-card transition-all duration-300 cursor-pointer">
       
       {/* PERBAIKAN 2: Grayscale dihapus, warna asli selalu tampil */}
       <img 

@@ -2,14 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, Folder, Mail, Globe } from "lucide-react"; // Tambahkan Mail
+import { Home, User, Briefcase, Folder, Mail, Globe, Sun, Moon } from "lucide-react"; // Tambahkan Mail, Sun, Moon
 import { Locale } from "@/lib/dictionary";
+import { useTheme } from "@/components/ThemeProvider";
 
 interface NavbarProps {
   locale: Locale;
 }
 
 export default function Navbar({ locale }: NavbarProps) {
+  const { theme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState("home");
 
   const isClickScrolling = useRef(false);
@@ -73,18 +75,18 @@ export default function Navbar({ locale }: NavbarProps) {
 
   return (
     <header className="fixed bottom-4 md:top-4 md:bottom-auto inset-x-0 z-50 flex justify-center px-4 transition-all duration-300">
-      <nav className="flex items-center gap-1 md:gap-2 bg-white/80 backdrop-blur-md border-2 border-brand-text/10 px-2 md:px-4 py-2 rounded-full shadow-lg">
+      <nav className="flex items-center gap-0.5 md:gap-2 bg-brand-card/80 backdrop-blur-md border-2 border-brand-text/10 px-1.5 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg transition-colors duration-300">
 
-        {/* Logo */}
+        {/* Logo - Hidden on Mobile */}
         <a
           href="#home"
           onClick={() => handleNavLinkClick("home")}
-          className="font-black text-lg md:text-xl tracking-tighter px-2 text-brand-text hover:scale-105 transition-transform"
+          className="hidden md:block font-black text-lg md:text-xl tracking-tighter px-2 text-brand-text hover:scale-105 transition-transform"
         >
           DAN<span className="text-brand-pink">.</span>
         </a>
 
-        <div className="h-5 md:h-6 w-[1px] bg-brand-text/10 mx-1" />
+        <div className="hidden md:block h-5 md:h-6 w-[1px] bg-brand-text/10 mx-1" />
 
         {/* Menu Navigasi */}
         {menuItems.map((item) => {
@@ -96,7 +98,7 @@ export default function Navbar({ locale }: NavbarProps) {
               key={item.id}
               href={item.path}
               onClick={() => handleNavLinkClick(item.id)}
-              className="relative px-3 md:px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 transition-colors text-brand-text"
+              className="relative px-2 md:px-4 py-1.5 md:py-2 rounded-full text-sm font-bold flex items-center gap-2 transition-colors text-brand-text"
               title={item.name}
             >
               {isActive && (
@@ -106,9 +108,9 @@ export default function Navbar({ locale }: NavbarProps) {
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              <Icon className={`w-4 h-4 md:w-4 md:h-4 ${isActive ? "text-white" : "text-brand-text"}`} />
+              <Icon className={`w-3.5 h-3.5 md:w-4 md:h-4 ${isActive ? (item.id === "contact" ? "text-brand-bg" : "text-white") : "text-brand-text"}`} />
 
-              <span className={`hidden lg:block ${isActive ? "text-white" : "hover:text-brand-purple transition-colors"}`}>
+              <span className={`hidden lg:block ${isActive ? (item.id === "contact" ? "text-brand-bg" : "text-white") : "hover:text-brand-purple transition-colors"}`}>
                 {item.name}
               </span>
             </a>
@@ -120,10 +122,24 @@ export default function Navbar({ locale }: NavbarProps) {
         {/* Language Switcher */}
         <button
           onClick={handleLanguageToggle}
-          className="flex items-center gap-1.5 px-2 md:px-3 py-1.5 border border-brand-text/10 rounded-full text-xs font-black bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all active:scale-95"
+          className="flex items-center gap-1 px-1.5 py-1 md:px-3 md:py-1.5 border border-brand-text/10 rounded-full text-[10px] md:text-xs font-black bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
         >
-          <Globe className="w-3.5 h-3.5 text-brand-text/70" />
+          <Globe className="w-3 h-3 md:w-3.5 md:h-3.5 text-brand-text/70" />
           <span>{locale.toUpperCase()}</span>
+        </button>
+
+        {/* Dark/Light Mode Switcher */}
+        <button
+          onClick={toggleTheme}
+          className="flex items-center justify-center p-1 md:p-2 border border-brand-text/10 rounded-full bg-brand-text/5 hover:bg-brand-text/10 text-brand-text transition-all cursor-pointer"
+          title={theme === "light" ? "Dark Mode" : "Light Mode"}
+          aria-label="Toggle Theme"
+        >
+          {theme === "light" ? (
+            <Moon className="w-3.5 h-3.5 text-brand-text/70" />
+          ) : (
+            <Sun className="w-3.5 h-3.5 text-brand-text/70" />
+          )}
         </button>
       </nav>
     </header>

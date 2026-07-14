@@ -114,11 +114,11 @@ export default function Contact({ dict }: ContactProps) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1"
           >
-            <div className="bg-white border border-brand-text/10 rounded-[32px] p-8 md:p-10 shadow-lg relative overflow-hidden">
+            <div className="bg-brand-card border border-brand-text/10 rounded-[32px] p-8 md:p-10 shadow-lg relative overflow-hidden transition-colors duration-300">
               
               {/* Overlay Pesan Sukses */}
               {status === "success" && (
-                <div className="absolute inset-0 z-20 bg-white flex flex-col items-center justify-center text-center p-8">
+                <div className="absolute inset-0 z-20 bg-brand-card flex flex-col items-center justify-center text-center p-8 transition-colors duration-300">
                   <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-20 h-20 bg-brand-mint/20 text-brand-mint rounded-full flex items-center justify-center mb-6">
                     <CheckCircle2 className="w-10 h-10" />
                   </motion.div>
@@ -140,7 +140,7 @@ export default function Contact({ dict }: ContactProps) {
                     name="name" 
                     placeholder={dict.namePlaceholder}
                     disabled={status === "loading"}
-                    className="w-full px-5 py-4 bg-brand-text/[0.03] border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 disabled:opacity-50"
+                    className="w-full px-5 py-4 bg-brand-text/[0.03] dark:bg-black/20 border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 disabled:opacity-50"
                     required
                   />
                 </div>
@@ -155,7 +155,7 @@ export default function Contact({ dict }: ContactProps) {
                     name="email" 
                     placeholder={dict.emailPlaceholder}
                     disabled={status === "loading"}
-                    className="w-full px-5 py-4 bg-brand-text/[0.03] border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 disabled:opacity-50"
+                    className="w-full px-5 py-4 bg-brand-text/[0.03] dark:bg-black/20 border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 disabled:opacity-50"
                     required
                   />
                 </div>
@@ -170,7 +170,7 @@ export default function Contact({ dict }: ContactProps) {
                     rows={4}
                     placeholder={dict.messagePlaceholder}
                     disabled={status === "loading"}
-                    className="w-full px-5 py-4 bg-brand-text/[0.03] border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 resize-none disabled:opacity-50"
+                    className="w-full px-5 py-4 bg-brand-text/[0.03] dark:bg-black/20 border border-brand-text/10 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all font-medium text-brand-text placeholder:text-brand-text/30 resize-none disabled:opacity-50"
                     required
                   ></textarea>
                 </div>
@@ -184,7 +184,7 @@ export default function Contact({ dict }: ContactProps) {
                 <button 
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full inline-flex justify-center items-center gap-2 px-8 py-4 bg-brand-text text-white font-black rounded-2xl shadow-md hover:bg-brand-purple hover:shadow-lg hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-brand-text cursor-pointer disabled:cursor-not-allowed"
+                  className="w-full inline-flex justify-center items-center gap-2 px-8 py-4 bg-brand-text text-brand-bg font-black rounded-2xl shadow-md hover:bg-brand-purple hover:text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-brand-text cursor-pointer disabled:cursor-not-allowed"
                 >
                   {status === "loading" ? (
                     <>

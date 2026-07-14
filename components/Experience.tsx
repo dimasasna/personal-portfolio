@@ -43,7 +43,7 @@ export default function Experience({ dict }: ExperienceProps) {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <div className="bg-white border border-brand-text/10 rounded-[32px] p-6 md:p-10 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-300 group overflow-hidden relative transform-gpu">
+              <div className="bg-brand-card border border-brand-text/10 rounded-[32px] p-6 md:p-10 shadow-sm hover:shadow-xl hover:border-brand-purple/20 transition-all duration-300 group overflow-hidden relative transform-gpu">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* --- HEADER KARTU --- */}

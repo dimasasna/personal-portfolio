@@ -17,7 +17,8 @@
     "name": "DIMAS ASNA",
     "role": "SOFTWARE QUALITY ASSURANCE",
     "bio": "Sebagai lulusan Sistem Informasi dengan semangat tinggi terhadap kualitas, saya berspesialisasi dalam merancang dan menjalankan strategi pengujian yang menangkap setiap celah sebelum sampai ke pengguna.\n\nDari pengujian manual dan analisis eksplorasi hingga otomatisasi pipeline dan integrasi CI/CD, saya memastikan perangkat lunak yang dirilis selalu andal, berperforma tinggi, dan siap untuk produksi.",
-    "downloadCv": "UNDUH CV"
+    "downloadCv": "UNDUH CV",
+    "previewCv": "LIHAT CV"
   },
   "skills": {
     "title": "Keahlian",
@@ -56,7 +57,7 @@
   "projects": {
     "title": "Karya",
     "accent": "Terbaik",
-    "subtitle": "Kumpulan proyek yang telah saya bangun, mulai dari desain antarmuka hingga sistem backend yang kompleks.",
+    "subtitle": "Kumpulan proyek pengujian yang berfokus pada memastikan kualitas, keandalan, dan performa perangkat lunak.",
     "drawer": {
       "close": "Tutup",
       "techStack": "Teknologi yang Digunakan",

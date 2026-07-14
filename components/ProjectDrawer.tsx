@@ -7,17 +7,50 @@ import { X, ExternalLink, Code2 } from "lucide-react";
 // Pindahkan fungsi getTechIcon ke luar komponen agar kinerjanya lebih cepat
 const getTechIcon = (tag: string) => {
   const icons: Record<string, string> = {
-    "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    "ReactJS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-    "WordPress": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
-    "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
-    "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+    // SQA Frameworks & Tools
+    "selenium": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
+    "cypress": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
+    "playwright": "https://playwright.dev/img/playwright-logo.svg",
+    "appium": "https://upload.wikimedia.org/wikipedia/commons/d/db/Appium-logo.png",
+    "cucumber": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Cucumber_logo.svg",
+    "postman": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    "jmeter": "https://upload.wikimedia.org/wikipedia/commons/1/11/Apache_Jmeter_Logo.svg",
+    "jest": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+    "katalon": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Katalon_Studio_icon.svg",
+    "pytest": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Pytest_logo.svg",
+
+    // Project Management & SQA Tracking
+    "jira": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+    "trello": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
+    "google sheet": "https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg",
+    "google sheets": "https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg",
+    "excel": "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+
+    // CI/CD & Version Control
+    "jenkins": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
+    "github action": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "github actions": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    "github": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "gitlab": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
+
+    // Languages & Web Dev
+    "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    "php": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    "laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+    "nextjs": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    "tailwind css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    "ui/ux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    "cms": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+
+    // Databases
+    "mysql": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+    "postgresql": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
   };
-  return icons[tag];
+  return icons[tag.toLowerCase()]; // Case-insensitive lookup
 };
 
 interface ProjectDrawerProps {
@@ -42,7 +75,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
 
   // Ekstrak data dari format MDX dengan aman
   const data = project?.frontmatter || project?.meta || project || {};
-  
+
   const title = data.title || "Proyek Tanpa Judul";
   const description = data.description || "Deskripsi proyek belum ditambahkan.";
   const image = data.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800";
@@ -60,7 +93,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-brand-text/60 z-[60] cursor-pointer"
+            className="fixed inset-0 bg-black/60 z-[60] cursor-pointer"
           />
 
           {/* Panel Laci (Meluncur dari kanan) */}
@@ -69,13 +102,13 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
             animate={{ x: 0, boxShadow: "-20px 0 50px rgba(0,0,0,0.1)" }}
             exit={{ x: "100%", boxShadow: "-20px 0 50px rgba(0,0,0,0)" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-[100dvh] w-full md:w-[600px] bg-white z-[70] overflow-y-auto flex flex-col"
+            className="fixed top-0 right-0 h-[100dvh] w-full md:w-[600px] bg-brand-card z-[70] overflow-y-auto flex flex-col"
           >
             {/* Header Laci */}
             <div className="relative aspect-video w-full bg-brand-text/5">
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-brand-text hover:bg-brand-amber hover:text-white transition-colors shadow-sm"
+                className="absolute top-4 right-4 z-10 w-10 h-10 bg-brand-card/90 backdrop-blur-md rounded-full flex items-center justify-center text-brand-text hover:bg-brand-amber hover:text-white transition-colors shadow-sm"
                 title={dict?.close}
               >
                 <X className="w-5 h-5" />
@@ -93,7 +126,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
               <h3 className="text-3xl md:text-4xl font-black text-brand-text mb-4 leading-tight">
                 {title}
               </h3>
-              
+
               <div className="prose prose-lg text-brand-text/70 mb-8 whitespace-pre-line leading-relaxed">
                 {description}
               </div>
@@ -112,9 +145,9 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
                       const iconUrl = getTechIcon(tag);
 
                       return (
-                        <span 
-                          key={i} 
-                          className="flex items-center gap-2 px-4 py-2 bg-brand-text/5 text-brand-text/80 text-sm font-bold rounded-full border border-brand-text/5 hover:bg-white hover:shadow-sm transition-all"
+                        <span
+                          key={i}
+                          className="flex items-center gap-2 px-4 py-2 bg-brand-text/5 text-brand-text/80 text-sm font-bold rounded-full border border-brand-text/5 hover:bg-brand-card hover:shadow-sm transition-all"
                         >
                           {iconUrl && (
                             <img src={iconUrl} alt={tag} className="w-4 h-4 object-contain" />
@@ -147,7 +180,7 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
                     className="inline-flex justify-center items-center gap-2 px-6 py-4 bg-brand-text/5 text-brand-text font-black rounded-2xl hover:bg-brand-text/10 transition-colors"
                     title={dict?.sourceCode}
                   >
-                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
                   </a>
                 )}
               </div>

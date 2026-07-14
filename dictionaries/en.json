@@ -17,7 +17,8 @@
     "name": "DIMAS ASNA",
     "role": "SOFTWARE QUALITY ASSURANCE",
     "bio": "As an Information Systems graduate with a passion for quality, I specialize in designing and executing test strategies that catch what others miss.\n\nFrom manual testing and exploratory analysis to automated pipelines and CI/CD integration, I thrive on ensuring software is reliable, performant, and production-ready.",
-    "downloadCv": "DOWNLOAD CV"
+    "downloadCv": "DOWNLOAD CV",
+    "previewCv": "PREVIEW CV"
   },
   "skills": {
     "title": "Tech",
@@ -56,7 +57,7 @@
   "projects": {
     "title": "Featured",
     "accent": "Works",
-    "subtitle": "A collection of projects I've built, ranging from user interfaces to complex backend systems.",
+    "subtitle": "A showcase of testing projects focused on ensuring software quality, reliability, and performance.",
     "drawer": {
       "close": "Close",
       "techStack": "Technologies Used",

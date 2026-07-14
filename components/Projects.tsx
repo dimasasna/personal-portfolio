@@ -64,7 +64,7 @@ export default function Projects({ dict, projects }: ProjectsProps) {
               onClick={scrollPrev}
               disabled={prevBtnDisabled}
               aria-label="Previous Project"
-              className="w-12 h-12 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/70 hover:bg-brand-text/5 hover:text-brand-amber transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-white"
+              className="w-12 h-12 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/70 hover:bg-brand-text/5 hover:text-brand-amber transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-brand-card"
             >
               <ChevronLeft size={24} />
             </button>
@@ -72,7 +72,7 @@ export default function Projects({ dict, projects }: ProjectsProps) {
               onClick={scrollNext}
               disabled={nextBtnDisabled}
               aria-label="Next Project"
-              className="w-12 h-12 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/70 hover:bg-brand-text/5 hover:text-brand-amber transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-white"
+              className="w-12 h-12 rounded-full border border-brand-text/10 flex items-center justify-center text-brand-text/70 hover:bg-brand-text/5 hover:text-brand-amber transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-brand-card"
             >
               <ChevronRight size={24} />
             </button>

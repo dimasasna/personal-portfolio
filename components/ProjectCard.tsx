@@ -5,32 +5,50 @@ import { motion } from "framer-motion";
 // Fungsi pemetaan Tag ke URL Logo Devicon
 const getTechIcon = (tag: string) => {
   const icons: Record<string, string> = {
-    Laravel:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    ReactJS:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "Tailwind CSS":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    MySQL:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    PostgreSQL:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    Nextjs:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    Typescript:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    Figma:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-    WordPress:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
-    PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
-    Bootstrap:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
-    HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-    JS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    // SQA Frameworks & Tools
+    "selenium": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
+    "cypress": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
+    "playwright": "https://playwright.dev/img/playwright-logo.svg",
+    "appium": "https://upload.wikimedia.org/wikipedia/commons/d/db/Appium-logo.png",
+    "cucumber": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Cucumber_logo.svg",
+    "postman": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    "jmeter": "https://upload.wikimedia.org/wikipedia/commons/1/11/Apache_Jmeter_Logo.svg",
+    "jest": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+    "katalon": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Katalon_Studio_icon.svg",
+    "pytest": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Pytest_logo.svg",
+
+    // Project Management & SQA Tracking
+    "jira": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+    "trello": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg",
+    "google sheet": "https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg",
+    "google sheets": "https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg",
+    "excel": "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+
+    // CI/CD & Version Control
+    "jenkins": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
+    "github action": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "github actions": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    "github": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    "gitlab": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
+
+    // Languages & Web Dev
+    "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    "php": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    "laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+    "nextjs": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    "tailwind css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    "ui/ux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    "cms": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
+
+    // Databases
+    "mysql": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+    "postgresql": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
   };
-  return icons[tag]; // Mengembalikan URL logo jika ada, jika tidak ada akan mengembalikan undefined
+  return icons[tag.toLowerCase()]; // Case-insensitive lookup
 };
 
 interface ProjectCardProps {
@@ -56,7 +74,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="h-full"
     >
-      <div className="bg-white border border-brand-text/10 rounded-[32px] overflow-hidden group hover:shadow-xl hover:border-brand-amber/30 transition-all duration-300 hover:-translate-y-1.5 transform-gpu h-full flex flex-col">
+      <div className="bg-brand-card border border-brand-text/10 rounded-[32px] overflow-hidden group hover:shadow-xl hover:border-brand-amber/30 transition-all duration-300 hover:-translate-y-1.5 transform-gpu h-full flex flex-col">
         <div className="relative aspect-video w-full bg-brand-text/5 overflow-hidden border-b border-brand-text/5">
           <img
             src={image}
@@ -81,7 +99,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 // UPDATE: Desain Pill Baru dengan Logo
                 <span
                   key={i}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-text/5 text-brand-text/80 text-xs font-bold rounded-full border border-brand-text/5 transition-colors group-hover:bg-white group-hover:shadow-sm group-hover:border-brand-text/10"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-text/5 text-brand-text/80 text-xs font-bold rounded-full border border-brand-text/5 transition-colors group-hover:bg-brand-card group-hover:shadow-sm group-hover:border-brand-text/10"
                 >
                   {/* Cek apakah logonya ada di fungsi mapping kita */}
                   {getTechIcon(tag) && (
