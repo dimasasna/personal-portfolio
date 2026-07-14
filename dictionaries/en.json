@@ -74,7 +74,6 @@
     "emailPlaceholder": "name@email.com",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project or idea...",
-    "send": "Send Message",
-    "location": "Location"
+    "send": "Send Message"
   }
 }
