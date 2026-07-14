@@ -51,7 +51,7 @@ export default function Hero({ dict }: HeroProps) {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight text-brand-text">
-            Deft Valian <span className="text-shimmer">Exanova</span>.
+            Dimas Asna <span className="text-shimmer">Nugraha</span>.
           </h1>
 
           <p className="text-2xl font-bold text-brand-text/90">
@@ -60,17 +60,17 @@ export default function Hero({ dict }: HeroProps) {
 
           <div className="flex gap-5 items-center text-brand-text/60">
             <MagneticButton strength={0.5}>
-              <a href="https://github.com/exvade" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors block" title="GitHub">
+              <a href="https://github.com/dimasasna" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors block" title="GitHub">
                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
               </a>
             </MagneticButton>
             <MagneticButton strength={0.5}>
-              <a href="https://instagram.com/dftvln" target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors block" title="Instagram">
+              <a href="https://instagram.com/dimasasna" target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors block" title="Instagram">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
             </MagneticButton>
             <MagneticButton strength={0.5}>
-              <a href="https://linkedin.com/in/deftvalian" target="_blank" rel="noopener noreferrer" className="hover:text-brand-blue transition-colors block" title="LinkedIn">
+              <a href="https://linkedin.com/in/dimasasna" target="_blank" rel="noopener noreferrer" className="hover:text-brand-blue transition-colors block" title="LinkedIn">
                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
               </a>
             </MagneticButton>
@@ -121,8 +121,8 @@ export default function Hero({ dict }: HeroProps) {
             >
               {/* PERBAIKAN 1: Hapus 'opacity-80' dan 'mix-blend-overlay' agar foto tampil 100% natural */}
               <Image
-                src="/images/hero.webp"
-                alt="Deft Valian"
+                src="/images/profile.webp"
+                alt="Dimas Asna Nugraha"
                 fill
                 priority
                 className="object-cover"
@@ -132,22 +132,22 @@ export default function Hero({ dict }: HeroProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
               <div className="absolute top-10 left-10 text-white">
-                <h2 className="text-3xl font-black tracking-tight">Deft Valian <span className="text-brand-amber">Exanova</span></h2>
-                <p className="text-base font-bold text-white/80">Fullstack Developer</p>
+                <h2 className="text-3xl font-black tracking-tight">Dimas Asna <span className="text-brand-amber">Nugraha</span></h2>
+                <p className="text-base font-bold text-white/80">Software Quality Assurance</p>
               </div>
 
               {/* Bento Detail Bawah: Glassmorphism elegan, transparan tanpa warna ngejreng */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white p-4 bg-white/10 rounded-full shadow-lg backdrop-blur-md border border-white/10">
                 <div className="flex items-center gap-3">
                   <Image
-                    src="/images/hero2.webp"
+                    src="/images/dimas.webp"
                     alt="Foto Profil dftvln"
                     width={40}
                     height={40}
                     className="rounded-full aspect-square border border-white/20 object-cover"
                   />
                   <div>
-                    <p className="text-base font-black text-white/90">@dftvln</p>
+                    <p className="text-base font-black text-white/90">@dimasasna</p>
                     <div className="flex items-center gap-1.5">
                       {/* Titik neon cyan menyala */}
                       <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-[0_0_10px_2px_rgba(34,211,238,0.8)]" />

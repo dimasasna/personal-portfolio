@@ -42,6 +42,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // Amankan folder statis dari incaran middleware
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|projects|images|content|CV-DeftValianExanova.pdf).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|projects|images|content|.*\\.pdf).*)",
   ],
 };

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
-import Preloader from "@/components/Preloader";
 import ClientEffects from "@/components/effects/ClientEffects";
 import { Locale } from "@/lib/dictionary";
 
@@ -14,22 +13,22 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://deftvalian.vercel.app"),
   title: {
-    default: "Deft Valian Exanova | Fullstack Developer",
-    template: "%s | Deft Valian Exanova",
+    default: "Dimas Asna Nugraha | Software Quality Assurance",
+    template: "%s | Dimas Asna Nugraha",
   },
   description:
-    "Website portofolio personal Fullstack Developer yang colorful dan interaktif.",
+    "Website portofolio personal Software Quality Assurance Engineer yang colorful dan interaktif.",
   openGraph: {
-    title: "Deft Valian Exanova | Fullstack Developer",
-    description: "Portofolio interaktif dan modern dari seorang Fullstack Developer.",
+    title: "Dimas Asna Nugraha | Software Quality Assurance",
+    description: "Portofolio interaktif dan modern dari seorang Software Quality Assurance Engineer.",
     url: "/",
-    siteName: "Deft Valian Exanova",
+    siteName: "Dimas Asna Nugraha",
     images: [
       {
-        url: "/images/hero.webp",
+        url: "/images/profile.jpeg",
         width: 1200,
         height: 630,
-        alt: "Deft Valian Exanova Portfolio Thumbnail",
+        alt: "Dimas Asna Nugraha Portfolio Thumbnail",
       },
     ],
     locale: "id_ID",
@@ -37,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deft Valian Exanova | Fullstack Developer",
-    description: "Portofolio interaktif dan modern dari seorang Fullstack Developer.",
-    images: ["/images/hero.webp"],
+    title: "Dimas Asna Nugraha | Software Quality Assurance",
+    description: "Portofolio interaktif dan modern dari seorang Software Quality Assurance Engineer.",
+    images: ["/images/profile.jpeg"],
   },
 };
 
@@ -57,8 +56,8 @@ export default async function RootLayout({
     <html lang={locale}>
       <body
         className={`${plusJakartaSans.className} bg-brand-bg text-brand-text antialiased selection:bg-brand-pink selection:text-white `}
+        suppressHydrationWarning
       >
-        <Preloader />
         <ClientEffects />
 
         {/* 2. PERUBAHAN DISINI: Tambahkan 'as Locale' agar komponen Navbar tetap aman */}

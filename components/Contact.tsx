@@ -16,6 +16,7 @@ interface ContactProps {
     message: string;
     messagePlaceholder: string;
     send: string;
+    location: string;
   };
 }
 
@@ -32,7 +33,7 @@ export default function Contact({ dict }: ContactProps) {
 
     try {
       // Ganti URL_FORMSPREE_ANDA dengan link asli dari Formspree
-      const response = await fetch("https://formspree.io/f/xojbeear", {
+      const response = await fetch("https://formspree.io/f/mrenbzwv", {
         method: "POST",
         body: formData,
         headers: {
@@ -85,8 +86,8 @@ export default function Contact({ dict }: ContactProps) {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-brand-text/60 uppercase tracking-wide">Email</p>
-                  <a href="mailto:deftvalian2411@gmail.com" className="text-lg font-black text-brand-text hover:text-brand-purple transition-colors">
-                    deftvalian2411@gmail.com
+                  <a href="mailto:dimas.asna@gmail.com" className="text-lg font-black text-brand-text hover:text-brand-purple transition-colors">
+                    dimas.asna@gmail.com
                   </a>
                 </div>
               </div>
@@ -96,9 +97,9 @@ export default function Contact({ dict }: ContactProps) {
                   <MapPin className="w-5 h-5 text-brand-pink" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-brand-text/60 uppercase tracking-wide">Lokasi</p>
+                  <p className="text-sm font-bold text-brand-text/60 uppercase tracking-wide">{dict.location}</p>
                   <p className="text-lg font-black text-brand-text">
-                    Bekasi, Indonesia
+                    Yogyakarta, Indonesia
                   </p>
                 </div>
               </div>

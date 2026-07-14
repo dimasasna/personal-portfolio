@@ -6,17 +6,17 @@
   },
   "hero": {
     "greeting": "Hello, I am",
-    "role": "Fullstack Developer",
-    "tagline": "Building functional, interactive, and user-centric web applications.",
+    "role": "Software Quality Assurance",
+    "tagline": "Ensuring every line of code ships with confidence, quality, and zero compromise.",
     "ctaProjects": "View Projects",
     "ctaContact": "Contact Me"
   },
   "about": {
     "sectionTitle": "ABOUT ME",
     "greeting": "I AM",
-    "name": "DEFT VALIAN",
-    "role": "FULLSTACK DEVELOPER",
-    "bio": "As an Information Systems graduate and Software Engineer, I specialize in translating complex business needs into efficient web applications.\n\nFrom digitizing operational workflows to architecting frontend interfaces, I thrive on building scalable full-stack solutions from the ground up that deliver real-world impact.",
+    "name": "DIMAS ASNA",
+    "role": "SOFTWARE QUALITY ASSURANCE",
+    "bio": "As an Information Systems graduate with a passion for quality, I specialize in designing and executing test strategies that catch what others miss.\n\nFrom manual testing and exploratory analysis to automated pipelines and CI/CD integration, I thrive on ensuring software is reliable, performant, and production-ready.",
     "downloadCv": "DOWNLOAD CV"
   },
   "skills": {
@@ -29,30 +29,23 @@
     "technologiesLabel": "Technologies Used",
     "list": [
       {
-        "company": "PT Advics Manufacturing Indonesia",
-        "role": "Fullstack Developer",
-        "period": "Aug 2025 - Feb 2026",
-        "location": "Karawang, Indonesia",
+        "company": "PT Talenta Sinergi Group",
+        "role": "Software Quality Assurance",
+        "period": "Okt 2023 - Jan 2024",
+        "location": "Yogyakarta, Indonesia",
         "description": [
-          "Replaced paper-based processes by developing an NG Scanning System (QR integration) and an automated Scrap Evidence document pipeline.",
-          "Architected scalable applications (Warehouse Engineering, IT Asset Management, and Help Desk) adapting to Laravel and ReactJS ecosystems.",
-          "Ensured high-speed data handling for thousands of concurrent records using advanced techniques like lazy loading in heavy-asset environments.",
-          "Revamped legacy interfaces with Tailwind CSS, delivering fully responsive and intuitive tools for both office executives and factory-floor personnel."
+          "Documented test results, defect findings, and testing scenarios to support clearer issue tracking and resolution.",
+          "Created 50+ manual test cases reducing overlooked defects during regression testing.",
+          "Improved regression testing efficiency by creating Selenium IDE test cases.",
+          "Collaborated cross-functionally with developers to ensure UI consistency and responsiveness across all internal tools for office and factory teams."
         ],
-        "technologies": ["Laravel", "ReactJS", "Tailwind CSS", "MySQL", "PostgreSQL"]
-      },
-      {
-        "company": "Vocasia",
-        "role": "Frontend Developer",
-        "period": "Jan 2025 - Jun 2025",
-        "location": "Remote",
-        "description": [
-          "Transformed complex UI/UX designs into responsive, mobile-first web components with strict cross-browser compatibility.",
-          "Successfully delivered 8+ major frontend tasks within a fast-paced environment, utilizing modern frameworks to enhance platform capabilities.",
-          "Actively participated in weekly technical sprints and synchronization meetings to align development workflows with business goals.",
-          "Recognized with a Certificate of Appreciation for consistently delivering clean, maintainable code ahead of project deadlines."
-        ],
-        "technologies": ["NextJS", "TypeScript", "Tailwind CSS", "Gitlab", "Figma"]
+        "technologies": [
+          "Postman",
+          "Selenium",
+          "Jira",
+          "MySQL",
+          "Git"
+        ]
       }
     ]
   },
@@ -81,6 +74,7 @@
     "emailPlaceholder": "name@email.com",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project or idea...",
-    "send": "Send Message"
+    "send": "Send Message",
+    "location": "Location"
   }
 }
