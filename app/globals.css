@@ -148,3 +148,22 @@ body {
 .theme-transitioning * {
   transition: none !important;
 }
+
+/* ASNA Bot — styled scrollbar for chat messages (Chromium) */
+#asnabot-panel .overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+
+#asnabot-panel .overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#asnabot-panel .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 999px;
+}
+
+#asnabot-panel .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+

@@ -77,5 +77,20 @@
     "messagePlaceholder": "Ceritakan tentang proyek atau ide Anda...",
     "send": "Kirim Pesan",
     "location": "Lokasi"
+  },
+  "asnabot": {
+    "title": "ASNA Bot",
+    "subtitle": "Tanya apa saja tentang Dimas!",
+    "placeholder": "Ketik pertanyaan kamu...",
+    "send": "Kirim",
+    "typing": "Mengetik...",
+    "error": "Terjadi kesalahan. Silakan coba lagi.",
+    "welcome": "Halo! 👋 Saya ASNA Bot. Saya tahu segalanya tentang Dimas Asna — pengalaman, keahlian, proyek, dan lainnya. Apa yang ingin kamu tanyakan?",
+    "suggestions": [
+      "Pengalaman kerja?",
+      "Keahlian teknis?",
+      "Ceritakan tentang proyek",
+      "Cara menghubungi Dimas?"
+    ]
   }
 }

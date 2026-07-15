@@ -75,6 +75,22 @@
     "emailPlaceholder": "name@email.com",
     "message": "Message",
     "messagePlaceholder": "Tell me about your project or idea...",
-    "send": "Send Message"
+    "send": "Send Message",
+    "location": "Location"
+  },
+  "asnabot": {
+    "title": "ASNA Bot",
+    "subtitle": "Ask me anything about Dimas!",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "typing": "Typing...",
+    "error": "Something went wrong. Please try again.",
+    "welcome": "Hi! 👋 I'm ASNA Bot. I know everything about Dimas Asna — his experience, skills, projects, and more. What would you like to know?",
+    "suggestions": [
+      "Work experience?",
+      "Technical skills?",
+      "Tell me about projects",
+      "How to contact Dimas?"
+    ]
   }
 }

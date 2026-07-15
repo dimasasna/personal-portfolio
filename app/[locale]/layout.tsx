@@ -4,8 +4,9 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 import ClientEffects from "@/components/effects/ClientEffects";
-import { Locale } from "@/lib/dictionary";
+import { Locale, getDictionary } from "@/lib/dictionary";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import AsnaBot from "@/components/AsnaBot";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -60,6 +61,12 @@ export default async function RootLayout({
   const themeCookie = cookieStore.get("theme")?.value;
   const isDark = themeCookie === "dark";
 
+  // Validated locale for type safety
+  const validLocale: Locale = locale === "en" ? "en" : "id";
+
+  // Load dictionary for AsnaBot translations
+  const dict = (await getDictionary(validLocale)) as any;
+
   return (
     <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
       <body
@@ -74,6 +81,11 @@ export default async function RootLayout({
           <main className="pt-14 min-h-screen px-6 md:px-12 max-w-6xl mx-auto w-full overflow-x-hidden">
             {children}
           </main>
+
+          {/* ASNA Bot — floating AI chat widget */}
+          {dict?.asnabot && (
+            <AsnaBot dict={dict.asnabot} locale={locale} />
+          )}
         </ThemeProvider>
       </body>
     </html>
