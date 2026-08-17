@@ -15,7 +15,7 @@
     "sectionTitle": "ABOUT ME",
     "greeting": "SAYA",
     "name": "DIMAS ASNA",
-    "role": "SOFTWARE QUALITY ASSURANCE",
+    "role": "QUALITY CONTROL/ASSURANCE",
     "bio": "Sebagai lulusan Sistem Informasi dengan semangat tinggi terhadap kualitas, saya berspesialisasi dalam merancang dan menjalankan strategi pengujian yang menangkap setiap celah sebelum sampai ke pengguna.\n\nDari pengujian manual dan analisis eksplorasi hingga otomatisasi pipeline dan integrasi CI/CD, saya memastikan perangkat lunak yang dirilis selalu andal, berperforma tinggi, dan siap untuk produksi.",
     "downloadCv": "UNDUH CV",
     "previewCv": "LIHAT CV"
@@ -29,6 +29,26 @@
     "accent": "Kerja",
     "technologiesLabel": "Teknologi yang Digunakan",
     "list": [
+      {
+        "company": "PT DayTrans",
+        "role": "Quality Control Officer",
+        "period": "July 2026 - Present",
+        "location": "Yogyakarta, Indonesia",
+        "description": [
+          "Monitor operasi armada menggunakan GPS Tracking System (Transtrack).",
+          "Identifikasi anomali operasional yang terkait dengan GPS, dashcam, CCTV, dan pemantauan kendaraan.",
+          "Menyiapkan laporan harian, mingguan, dan insiden menggunakan Microsoft Excel.",
+          "Memantau kecepatan berlebih dan kepatuhan operasional armada.",
+          "Berkolaborasi dengan tim Operasional, Pengemudi, dan Keamanan untuk menjaga kualitas layanan.",
+          "Mendukung perbaikan berkelanjutan melalui pemantauan dan pelaporan operasional."
+        ],
+        "technologies": [
+          "Telematics Transtrack",
+          "Microsoft Excel",
+          "Google Spreadsheet",
+          "Canva"
+        ]
+      },
       {
         "company": "PT Talenta Sinergi Group",
         "role": "Software Quality Assurance",
